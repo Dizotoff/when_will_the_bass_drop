@@ -1,0 +1,23 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{11634A4F-C5AE-95B8-67F5-5CED605569EB}") = "WHEN_WILL_THE_BASS_DROP", "Assembly-CSharp.csproj", "{8DC9D0B8-7D55-0EE8-A561-00189BC14E3F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8DC9D0B8-7D55-0EE8-A561-00189BC14E3F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DC9D0B8-7D55-0EE8-A561-00189BC14E3F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DC9D0B8-7D55-0EE8-A561-00189BC14E3F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DC9D0B8-7D55-0EE8-A561-00189BC14E3F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal
