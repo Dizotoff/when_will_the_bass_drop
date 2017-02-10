@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class CameraFollowPlayer : MonoBehaviour {
-	GameObject player;
+	GameObject player; // create object player
 	bool followPlayer = true;
 	// Use this for initialization
 	void Start () {
-		player = GameObject.FindGameObjectWithTag ("Player");
+		player = GameObject.FindGameObjectWithTag ("Player");// find gameobject with tag "player" there are few custom tags in unity 
 		
 	}
 	
@@ -25,7 +25,7 @@ public class CameraFollowPlayer : MonoBehaviour {
 		void camFollowPlayer()
 	
 		{
-		Vector3 newPos = new Vector3 (player.transform.position.x, player.transform.position.y, this.transform.position.z);
+		Vector3 newPos = new Vector3 (player.transform.position.x, player.transform.position.y, this.transform.position.z); // take players x and y position and keep camera z position, then assigned it to the transform position
 		this.transform.position = newPos;
 
 		}

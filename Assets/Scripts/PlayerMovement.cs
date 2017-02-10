@@ -18,12 +18,12 @@ public class PlayerMovement : MonoBehaviour {
 
 	void movement(){  
 		if (Input.GetKey (KeyCode.W)) { //detect if the key down or up 
-			transform.Translate (Vector3.up * speed * Time.deltaTime,Space.World);
-			moving = true;//time.deltatime for increasing the perfomance on the old computer 
+			transform.Translate (Vector3.up * speed * Time.deltaTime,Space.World); //time.deltatime for increasing the perfomance on the old computer. Space.world tells that movement relative to the world space, cause it can moves aroud courser rotation
+			moving = true; // for detecting moving 
 		}
 		if (Input.GetKey (KeyCode.S)) {
 			transform.Translate (Vector3.down * speed * Time.deltaTime,Space.World);
-			moving = true;
+			moving = true; 
 		}
 		if (Input.GetKey (KeyCode.A)) {
 			transform.Translate (Vector3.left * speed * Time.deltaTime,Space.World);
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour {
 			moving = true;
 		}
 
-		if (Input.GetKey (KeyCode.D) != true && Input.GetKey (KeyCode.W) != true && Input.GetKey (KeyCode.S) != true && Input.GetKey (KeyCode.A) != true) 
+		if (Input.GetKey (KeyCode.D) != true && Input.GetKey (KeyCode.W) != true && Input.GetKey (KeyCode.S) != true && Input.GetKey (KeyCode.A) != true) // if key didnt pressed -> not moving
 		{
 			moving = false;
 		}

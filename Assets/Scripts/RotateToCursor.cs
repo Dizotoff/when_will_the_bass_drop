@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class RotateToCursor : MonoBehaviour {
 
-	Vector3 mousePos;
-	Camera cam;
-	Rigidbody2D rid;
+	Vector3 mousePos; //c
+	Camera cam; //main camera class
+	Rigidbody2D rid; //controller for physics for object
 	// Use this for initialization
 	void Start () {
 		rid = this.GetComponent<Rigidbody2D> ();
@@ -22,7 +22,7 @@ public class RotateToCursor : MonoBehaviour {
 
 	void rotateToCamera()
 	{
-		mousePos = cam.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z - cam.transform.position.z));
-		rid.transform.eulerAngles = new Vector3 (0, 0, Mathf.Atan2 ((mousePos.y - transform.position.y), (mousePos.x - transform.position.x)) * Mathf.Rad2Deg);
+		mousePos = cam.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, Input.mousePosition.z - cam.transform.position.z)); //calculate the screen to world point
+		rid.transform.eulerAngles = new Vector3 (0, 0, Mathf.Atan2 ((mousePos.y - transform.position.y), (mousePos.x - transform.position.x)) * Mathf.Rad2Deg); // rotates towards the player
 	}
 }
