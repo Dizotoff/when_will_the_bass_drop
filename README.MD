@@ -1,5 +1,4 @@
-###### Helsinki Metropolia
-University of Applied Sciences ######
+###### Helsinki Metropolia University of Applied Sciences ######
 
 ###Game project:###
 
