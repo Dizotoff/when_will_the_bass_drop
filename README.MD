@@ -1,4 +1,4 @@
-###### Helsinki Metropolia University of Applied Sciences ######
+###### TXL16S1-B  ######
 
 ###Game project:###
 
