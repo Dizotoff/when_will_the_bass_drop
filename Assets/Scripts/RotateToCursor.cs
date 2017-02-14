@@ -11,13 +11,13 @@ public class RotateToCursor : MonoBehaviour {
 	void Start () {
 		rid = this.GetComponent<Rigidbody2D> ();
 		cam = Camera.main;
-		
+
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
 		rotateToCamera ();
-		
+
 	}
 
 	void rotateToCamera()

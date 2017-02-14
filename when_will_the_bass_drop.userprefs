@@ -2,9 +2,10 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RotateToCursor.cs">
     <Files>
-      <File FileName="Assets\Scripts\CameraFollowPlayer.cs" Line="28" Column="222" />
-      <File FileName="Assets\Scripts\RotateToCursor.cs" Line="25" Column="186" />
-      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="37" Column="186" />
+      <File FileName="Assets\Scripts\CameraFollowPlayer.cs" Line="61" Column="2" />
+      <File FileName="Assets\Scripts\RotateToCursor.cs" Line="28" Column="2" />
+      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="59" Column="2" />
+      <File FileName="Assets\Scripts\CameraRotateEffect.cs" Line="35" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

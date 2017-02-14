@@ -4,33 +4,58 @@ using UnityEngine;
 
 public class CameraFollowPlayer : MonoBehaviour {
 	GameObject player; // create object player
-	bool followPlayer = true;
-	// Use this for initialization
+	public bool followPlayer = true;
+	Vector3 mousePos;
+	PlayerMovement pm;
+	Camera cam;
 	void Start () {
 		player = GameObject.FindGameObjectWithTag ("Player");// find gameobject with tag "player" there are few custom tags in unity 
-		
+		pm = player.GetComponent<PlayerMovement>();
+		cam = Camera.main;
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
-		if (followPlayer == true) {
-			camFollowPlayer ();
-		}
-	}
-		public void setFollowPlayer (bool val)
+		if (Input.GetKey (KeyCode.LeftShift)) //If shift pressed play stop movement and camera starts following the mouse 
 		{
-			followPlayer = val;
+			followPlayer = false;
+			pm.setMoving(false);
+		} else
+		{
+			followPlayer = true;
 		}
 
-		void camFollowPlayer()
-	
+		if (followPlayer == true) {
+			camFollowPlayer ();
+		} else
 		{
+			lookAhead();
+		}
+	}
+	public void setFollowPlayer (bool val)
+	{
+		followPlayer = val;
+	}
+
+	void camFollowPlayer()
+
+	{
 		Vector3 newPos = new Vector3 (player.transform.position.x, player.transform.position.y, this.transform.position.z); // take players x and y position and keep camera z position, then assigned it to the transform position
 		this.transform.position = newPos;
 
+	}
+
+	void lookAhead()
+	{
+		Vector3 camPos = cam.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y)); //get the mouse position to move the camera 
+		camPos.z = -10; //Increase the screenview 
+		Vector3 dir = camPos - this.transform.position; //Direction between player and mouse axis 
+		if (player.GetComponent<SpriteRenderer>().isVisible == true) //If player sprite is visible move the camera until it become invisible to camera
+		{
+			transform.Translate(dir * 2 * Time.deltaTime); 
 		}
 
-
+	}
 
 
 }

@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\CameraFollowPlayer.cs" />
+     <Compile Include="Assets\Scripts\CameraRotateEffect.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\RotateToCursor.cs" />
  <Reference Include="UnityEngine.UI">
