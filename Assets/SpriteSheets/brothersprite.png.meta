@@ -1,9 +1,30 @@
 fileFormatVersion: 2
 guid: 99d3b2c8e51c42049b782d236545014a
-timeCreated: 1486561414
+timeCreated: 1487803822
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: brothersprite_0
+    21300002: brothersprite_1
+    21300004: brothersprite_2
+    21300006: brothersprite_3
+    21300008: brothersprite_4
+    21300010: brothersprite_5
+    21300012: brothersprite_6
+    21300014: brothersprite_7
+    21300016: brothersprite_8
+    21300018: brothersprite_9
+    21300020: brothersprite_10
+    21300022: brothersprite_11
+    21300024: brothersprite_12
+    21300026: brothersprite_13
+    21300028: brothersprite_14
+    21300030: brothersprite_15
+    21300032: brothersprite_16
+    21300034: brothersprite_17
+    21300036: brothersprite_18
+    21300038: brothersprite_19
+    21300040: Dead
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -27,14 +48,14 @@ TextureImporter:
   textureFormat: 1
   maxTextureSize: 2048
   textureSettings:
-    filterMode: -1
+    filterMode: 2
     aniso: -1
     mipBias: -1
-    wrapMode: 1
+    wrapMode: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -58,9 +79,290 @@ TextureImporter:
     crunchedCompression: 0
     allowsAlphaSplitting: 0
     overridden: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: brothersprite_0
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 244
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_1
+      rect:
+        serializedVersion: 2
+        x: 729
+        y: 244
+        width: 14
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_2
+      rect:
+        serializedVersion: 2
+        x: 763
+        y: 243
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_3
+      rect:
+        serializedVersion: 2
+        x: 795
+        y: 243
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_4
+      rect:
+        serializedVersion: 2
+        x: 827
+        y: 244
+        width: 16
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_5
+      rect:
+        serializedVersion: 2
+        x: 861
+        y: 243
+        width: 14
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_6
+      rect:
+        serializedVersion: 2
+        x: 699
+        y: 50
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_7
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 83
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_8
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 116
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_9
+      rect:
+        serializedVersion: 2
+        x: 691
+        y: 148
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_10
+      rect:
+        serializedVersion: 2
+        x: 694
+        y: 182
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_11
+      rect:
+        serializedVersion: 2
+        x: 695
+        y: 215
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_12
+      rect:
+        serializedVersion: 2
+        x: 732
+        y: 215
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_13
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 214
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_14
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 214
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_15
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 215
+        width: 27
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_16
+      rect:
+        serializedVersion: 2
+        x: 859
+        y: 214
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_17
+      rect:
+        serializedVersion: 2
+        x: 893
+        y: 214
+        width: 19
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_18
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 215
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_19
+      rect:
+        serializedVersion: 2
+        x: 930
+        y: 248
+        width: 12
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Dead
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 613
+        width: 53
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
     outline: []
   spritePackingTag: 
   userData: 
