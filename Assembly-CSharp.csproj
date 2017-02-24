@@ -53,6 +53,8 @@
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\RotateToCursor.cs" />
      <Compile Include="Assets\Scripts\SpriteContainer.cs" />
+     <Compile Include="Assets\Scripts\WeaponAttack.cs" />
+     <Compile Include="Assets\Scripts\WeaponPickup.cs" />
      <Compile Include="Assets\Scripts\legDir.cs" />
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
