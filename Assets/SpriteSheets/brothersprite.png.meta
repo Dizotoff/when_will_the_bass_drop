@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 99d3b2c8e51c42049b782d236545014a
-timeCreated: 1487818587
+timeCreated: 1488034911
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -46,6 +46,10 @@ TextureImporter:
     21300078: brothersprite_36
     21300080: brothersprite_37
     21300082: brothersprite_38
+    21300084: brothersprite_39
+    21300086: brothersprite_40
+    21300088: brothersprite_41
+    21300090: brothersprite_42
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -652,6 +656,58 @@ TextureImporter:
         y: 215
         width: 39
         height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_39
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 69
+        width: 13
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_40
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 105
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_41
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 142
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: brothersprite_42
+      rect:
+        serializedVersion: 2
+        x: 561
+        y: 177
+        width: 26
+        height: 27
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}

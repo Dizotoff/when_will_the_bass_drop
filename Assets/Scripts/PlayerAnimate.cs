@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAnimate : MonoBehaviour {
-	Sprite[] walking, attacking, legsSpr;
+	public Sprite[] walking, attacking, legsSpr;
 	int counter = 0, legCount =0;
 	PlayerMovement pm;
 	float timer = 0.05f, legTimer = 0.05f;
@@ -16,6 +16,7 @@ public class PlayerAnimate : MonoBehaviour {
 		sc = GameObject.FindGameObjectWithTag ("GameController").GetComponent<SpriteContainer> ();
 		walking = sc.getPlayerUnarmedWalk ();
 		legsSpr = sc.getPlayerLegs ();
+		attacking = sc.getPlayerPunch ();
 		
 	}
 	

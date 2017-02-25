@@ -3,7 +3,7 @@ using System.Collections;
 
 public class SpriteContainer : MonoBehaviour {
 	public Sprite[] pLegs,pUnarmedWalk,pPunch,pMac10Walk,pMac10Attack,pBowieWalk,pBowieAttack;
-	public Sprite enemySMG, enemyKnife, enemyUnarmed;
+
 	// Use this for initialization
 	void Start () {
 

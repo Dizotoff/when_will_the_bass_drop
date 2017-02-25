@@ -11,6 +11,7 @@ public class WeaponPickup : MonoBehaviour {
 	void Start () {
 		wa = GameObject.FindGameObjectWithTag ("Player").GetComponent<WeaponAttack> ();
 
+
 	}
 
 	// Update is called once per frame
