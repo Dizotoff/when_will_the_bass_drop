@@ -56,3 +56,7 @@ C:\Users\Dizotoff\Desktop\testprev\when_will_the_bass_drop\Temp\bin\Debug\UnityE
 C:\Users\Dizotoff\Desktop\testprev\when_will_the_bass_drop\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\Dizotoff\Desktop\testprev\when_will_the_bass_drop\obj\Debug\Assembly-CSharp.dll
 C:\Users\Dizotoff\Desktop\testprev\when_will_the_bass_drop\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Dizotoff\Desktop\testprev\when_will_the_bass_drop\Temp\bin\Debug\UnityEngine.Advertisements.dll
+C:\Users\Dizotoff\Desktop\testprev\when_will_the_bass_drop\Temp\bin\Debug\UnityEngine.Purchasing.dll
+C:\Users\Dizotoff\Desktop\testprev\when_will_the_bass_drop\Temp\bin\Debug\UnityEngine.Advertisements.xml
+C:\Users\Dizotoff\Desktop\testprev\when_will_the_bass_drop\Temp\bin\Debug\UnityEngine.Purchasing.xml

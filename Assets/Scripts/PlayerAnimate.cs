@@ -87,9 +87,25 @@ public class PlayerAnimate : MonoBehaviour {
 	public void resetCounter()
 	{
 		counter = 0;
+		attackCheck ();
+	}
+
+	void attackCheck(){
+		if (attackingB == false) {
+			torso.sprite = walking[0];
+		}
 	}
 	public bool getAttack(){
 		return attackingB;
+	}
+
+
+	public void resetSprites()
+	{
+		counter = 0;
+		walking = sc.getPlayerUnarmedWalk ();
+		attacking = sc.getPlayerPunch ();
+		torso.sprite = walking[0];
 	}
 
 	public void setNewTorso(Sprite[] walk, Sprite[] attack)
@@ -97,6 +113,7 @@ public class PlayerAnimate : MonoBehaviour {
 		counter = 0;
 		attacking = attack;
 		walking = walk;
+		torso.sprite = walking [0];
 	}
 
 

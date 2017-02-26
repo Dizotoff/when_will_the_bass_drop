@@ -10,7 +10,7 @@ public class WeaponAttack : MonoBehaviour {
 
 	float weaponChange = 0.5f;
 	bool changingWeapon = false;
-
+	bool oneHanded = false;
 
 	void Start () {
 		pa = this.GetComponent<PlayerAnimate> ();
@@ -21,7 +21,11 @@ public class WeaponAttack : MonoBehaviour {
 	void Update () {
 
 
-		if(Input.GetMouseButton(0))
+		if (timer > 0) {
+			timer -= Time.deltaTime;
+		}
+
+		if(Input.GetMouseButton(0) && timer <=0)
 		{
 			attack ();
 		}
@@ -47,7 +51,7 @@ public class WeaponAttack : MonoBehaviour {
 		}
 	}
 
-	public void setWeapon(GameObject cur, string name, float fireRate,bool gun)
+	public void setWeapon(GameObject cur, string name, float fireRate,bool gun, bool oneHanded)
 	{
 		
 		changingWeapon = true;
@@ -56,14 +60,32 @@ public class WeaponAttack : MonoBehaviour {
 		this.gun = gun;
 		timerReset = fireRate;
 		timer = timerReset;
+		this.oneHanded = oneHanded;
 	}
 		
 
 	public void attack()
 	{
 
-			pa.attack ();
+			
+		pa.attack ();
+		RaycastHit2D ray = Physics2D.Raycast (new Vector2 (this.transform.position.x, this.transform.position.y), new Vector2 (transform.right.x, transform.right.y)); //create a line from the player wich can hit an enemy 
+		Debug.DrawRay (new Vector2 (this.transform.position.x, this.transform.position.y), new Vector2 (transform.right.x, transform.right.y), Color.green);
 
+
+		//THE PROBLEM IS HERE!!!!!!
+		if (curWeapon == null && ray.collider.gameObject.tag == "Enemy") {
+			EnemyAttacked ea = ray.collider.gameObject.GetComponent<EnemyAttacked> ();
+			ea.knockDownEnemy ();
+			Debug.Log ("KNOCKED DOWN!");
+		} else if (ray.collider != null) {
+			if (ray.collider.gameObject.tag == "Enemy") { //if player have meelee weapon -> instant kill 
+				EnemyAttacked ea = ray.collider.gameObject.GetComponent<EnemyAttacked> ();
+				ea.killMelee ();
+				Debug.Log ("KILL!");
+			}
+
+		}
 	}
 
 	public GameObject getCur()
@@ -76,7 +98,7 @@ public class WeaponAttack : MonoBehaviour {
 		
 		curWeapon.transform.position = this.transform.position;
 			curWeapon.SetActive (true);
-		setWeapon (null, "", 0.5f, false);
+		setWeapon (null, "", 0.5f, false, false);
 			
 		}
 

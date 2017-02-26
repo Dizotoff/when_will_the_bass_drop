@@ -6,7 +6,7 @@ public class WeaponPickup : MonoBehaviour {
 	public string name; //name of sprite in conteiner
 	public float fireRate; //fire rate)
 	WeaponAttack wa; //script of playe attacking
-	public bool gun;
+	public bool gun, oneHanded;
 	// Use this for initialization
 	void Start () {
 		wa = GameObject.FindGameObjectWithTag ("Player").GetComponent<WeaponAttack> ();
@@ -20,7 +20,7 @@ public class WeaponPickup : MonoBehaviour {
 	}
 
 	void OnTriggerStay2D(Collider2D coll) {
-		Debug.Log ("Collision, m8");
+		
 		if (coll.gameObject.tag == "Player" && Input.GetMouseButtonDown (1)) { //right mouse button to pickup the weapon
 			//code to add weapon to player
 
@@ -28,7 +28,7 @@ public class WeaponPickup : MonoBehaviour {
 			if (wa.getCur () != null) {
 				wa.dropWeapon ();
 			}
-			wa.setWeapon (this.gameObject, name, fireRate, gun); //passing the name of sprite, firerate, attacking script (gun,meelee, shotgun)
+			wa.setWeapon (this.gameObject, name, fireRate, gun, oneHanded); //passing the name of sprite, firerate, attacking script (gun,meelee, shotgun)
 			// DESTROY THIS GAMEOBJECT
 			this.gameObject.SetActive(false);
 
