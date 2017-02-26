@@ -4,30 +4,57 @@ using Mono.Data.Sqlite;
 using System;
 using System.Data;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
-public class HighScoreManager : MonoBehaviour {
-	
+public class highScoreManager : MonoBehaviour {
+
 	private string connectionString;
 	private List <highscores> highscore = new List<highscores> ();
-
+	public GameObject ScorePrefab;
+	public Transform scoreParent;
+	public int SaveScores;
+	public int TopRank;
+	public InputField enterName;
+	public GameObject nameDialog;
 
 	void Start () {
 		connectionString = "URI= file:" + Application.dataPath + "/highscore.sqlite";
-		GetScore ();
+		InsertScore("Sari",120);
+		ShowScore ();
+		DeleteExtraScores ();
 
 	}
-	
+
 	// Update is called once per frame
-	void Update () {
+	void Update () 
+	{
+		if (Input.GetKeyDown (KeyCode.Escape))
+		{
+			nameDialog.SetActive(!nameDialog.activeSelf);
+		}
+	}
+	public void EnterName()
+	{
+		if (enterName.text != string.Empty) 
+		{
+			int score = UnityEngine.Random.Range (1, 500);
+			InsertScore (enterName.text, score);
+			enterName.text = string.Empty;
+
+			ShowScore ();
+		}
 		
 	}
+
 	private void InsertScore(string name, int newScore)
 	{
+
 		using (IDbConnection dbconnection = new SqliteConnection (connectionString)) 
 		{
 			dbconnection.Open ();
 
-			using (IDbCommand dbCmd = dbconnection.CreateCommand ()) {
+			using (IDbCommand dbCmd = dbconnection.CreateCommand ())
+			{
 				string sqlQuery = string.Format("INSERT INTO highscore(Name,Score) VALUES(\"{0}\",\"{1}\") ",name,newScore);
 
 				dbCmd.CommandText = sqlQuery;
@@ -35,6 +62,7 @@ public class HighScoreManager : MonoBehaviour {
 				dbconnection.Close ();
 			}
 		}
+		highscore.Sort ();
 	}
 	private void GetScore()
 	{
@@ -61,4 +89,46 @@ public class HighScoreManager : MonoBehaviour {
 			}
 		}
 	}
+	private void ShowScore()
+	{
+		GetScore ();
+		foreach (GameObject score in GameObject.FindGameObjectsWithTag ("Score")) {
+			Destroy (score);
+		}
+
+		for (int i = 0; i < TopRank; i++) 
+		{
+			GameObject tmpobjec = Instantiate (ScorePrefab);
+			highscores tmpscore = highscore[i];
+			tmpobjec.GetComponent <highscorescript> ().SetScore (tmpscore.Name, tmpscore.Score.ToString (), "#" + (i + 1).ToString ());
+
+			tmpobjec.transform.SetParent (scoreParent);
+			tmpobjec.GetComponent <RectTransform> ().localScale = new Vector3 (1, 1, 1);
+		}
+
+	}
+	public void DeleteExtraScores()
+	{
+		GetScore ();
+		if (SaveScores <= highscore.Count) 
+		{
+			int deleteCount = highscore.Count - SaveScores;
+			highscore.Reverse ();
+
+			using (IDbConnection dbConnection = new SqliteConnection(connectionString))
+			{
+				dbConnection.Open ();
+				using (IDbCommand dbCmd= dbConnection.CreateCommand())
+				{
+					for (int i=0; i<deleteCount; i++)
+					{
+						string sqlQuery= string.Format("DELETE FROM highscore WHERE PLAYERID= \"{0}\"",highscore[i].ID);
+						dbCmd.CommandText=sqlQuery;
+						dbCmd.ExecuteScalar();
+					}
+					dbConnection.Close();
+				}
+			}
+		}
+	} 
 }

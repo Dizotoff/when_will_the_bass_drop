@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 74a37552d3f3ef44e96356895a6e7320
-timeCreated: 1487079539
+guid: 1a23f41789e014244af0880db433e958
+timeCreated: 1487877147
 licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - ScorePrefab: {fileID: 1483183274223836, guid: f7c7677cc7706c145b8b9e281ff35080,
+      type: 2}
+  - scoreParent: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

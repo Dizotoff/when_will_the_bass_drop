@@ -1,10 +1,10 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RotateToCursor.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\highScoreManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\CameraFollowPlayer.cs" Line="28" Column="222" />
-      <File FileName="Assets\Scripts\RotateToCursor.cs" Line="25" Column="186" />
-      <File FileName="Assets\Scripts\PlayerMovement.cs" Line="37" Column="186" />
+      <File FileName="Assets\Scripts\highscorescript.cs" Line="5" Column="44" />
+      <File FileName="Assets\Scripts\highscores.cs" Line="23" Column="12" />
+      <File FileName="Assets\Scripts\highScoreManager.cs" Line="22" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
