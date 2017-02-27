@@ -19,9 +19,9 @@ public class highScoreManager : MonoBehaviour {
 
 	void Start () {
 		connectionString = "URI= file:" + Application.dataPath + "/highscore.sqlite";
-		InsertScore("Sari",120);
-		ShowScore ();
+		CreateTable ();
 		DeleteExtraScores ();
+		ShowScore ();
 
 	}
 
@@ -89,6 +89,23 @@ public class highScoreManager : MonoBehaviour {
 			}
 		}
 	}
+	private void CreateTable()
+	{
+		using (IDbConnection dbconnection = new SqliteConnection (connectionString)) 
+		{
+			dbconnection.Open ();
+
+			using (IDbCommand dbCmd = dbconnection.CreateCommand ())
+			{
+				string sqlQuery = string.Format("CREATE TABLE highscore if not exists (PlayerID INTEGER PRIMARY KEY  AUTOINCREMENT  NOT NULL  UNIQUE , Name TEXT NOT NULL , Score INTEGER NOT NULL ) ");
+
+				dbCmd.CommandText = sqlQuery;
+				dbCmd.ExecuteScalar ();
+				dbconnection.Close ();
+			}
+	}
+	}
+
 	private void ShowScore()
 	{
 		GetScore ();
@@ -110,7 +127,7 @@ public class highScoreManager : MonoBehaviour {
 	public void DeleteExtraScores()
 	{
 		GetScore ();
-		if (SaveScores <= highscore.Count) 
+		if (SaveScores >= highscore.Count) 
 		{
 			int deleteCount = highscore.Count - SaveScores;
 			highscore.Reverse ();

@@ -4,7 +4,7 @@
     <Files>
       <File FileName="Assets\Scripts\highscorescript.cs" Line="5" Column="44" />
       <File FileName="Assets\Scripts\highscores.cs" Line="23" Column="12" />
-      <File FileName="Assets\Scripts\highScoreManager.cs" Line="22" Column="21" />
+      <File FileName="Assets\Scripts\highScoreManager.cs" Line="24" Column="16" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
