@@ -23,7 +23,7 @@ Platform assembly: C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\highs_D
 Loading C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\highs_Data\Managed\Mono.Data.Sqlite.dll into Unity Child Domain
 Platform assembly: C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\highs_Data\Managed\System.Data.dll (this message is harmless)
 Loading C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\highs_Data\Managed\System.Data.dll into Unity Child Domain
-- Completed reload, in  0.477 seconds
+- Completed reload, in  0.636 seconds
 Platform assembly: C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\highs_Data\Managed\System.Core.dll (this message is harmless)
 Platform assembly: C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\highs_Data\Managed\System.dll (this message is harmless)
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
@@ -43,7 +43,7 @@ The referenced script on this Behaviour (Game Object 'Player') is missing!
  
 (Filename:  Line: 1754)
 
-UnloadTime: 8.513021 ms
+UnloadTime: 1.572546 ms
 Platform assembly: C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\highs_Data\Managed\System.Transactions.dll (this message is harmless)
 Platform assembly: C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\highs_Data\Managed\System.Xml.dll (this message is harmless)
 SqliteException: SQLite error
@@ -87,5 +87,56 @@ UnityEngine.EventSystems.EventSystem:Update()
  
 (Filename:  Line: -1)
 
+SqliteException: SQLite error
+no such table: highscore
+  at Mono.Data.Sqlite.SQLite3.Prepare (Mono.Data.Sqlite.SqliteConnection cnn, System.String strSql, Mono.Data.Sqlite.SqliteStatement previous, UInt32 timeoutMS, System.String& strRemain) [0x00000] in <filename unknown>:0 
+  at Mono.Data.Sqlite.SqliteCommand.BuildNextCommand () [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+SqliteException: SQLite error
+no such table: highscore
+  at Mono.Data.Sqlite.SQLite3.Prepare (Mono.Data.Sqlite.SqliteConnection cnn, System.String strSql, Mono.Data.Sqlite.SqliteStatement previous, UInt32 timeoutMS, System.String& strRemain) [0x00000] in <filename unknown>:0 
+  at Mono.Data.Sqlite.SqliteCommand.BuildNextCommand () [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
+SqliteException: SQLite error
+no such table: highscore
+  at Mono.Data.Sqlite.SQLite3.Prepare (Mono.Data.Sqlite.SqliteConnection cnn, System.String strSql, Mono.Data.Sqlite.SqliteStatement previous, UInt32 timeoutMS, System.String& strRemain) [0x00000] in <filename unknown>:0 
+  at Mono.Data.Sqlite.SqliteCommand.BuildNextCommand () [0x00000] in <filename unknown>:0 
+UnityEngine.DebugLogHandler:Internal_LogException(Exception, Object)
+UnityEngine.DebugLogHandler:LogException(Exception, Object)
+UnityEngine.Logger:LogException(Exception, Object)
+UnityEngine.Debug:LogException(Exception)
+UnityEngine.EventSystems.ExecuteEvents:Execute(GameObject, BaseEventData, EventFunction`1)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMousePress(MouseButtonEventData)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent(Int32)
+UnityEngine.EventSystems.StandaloneInputModule:ProcessMouseEvent()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+UnityEngine.EventSystems.EventSystem:Update()
+ 
+(Filename:  Line: -1)
+
 Setting up 1 worker threads for Enlighten.
-  Thread -> id: 157c -> priority: 1 
+  Thread -> id: 12fc -> priority: 1 

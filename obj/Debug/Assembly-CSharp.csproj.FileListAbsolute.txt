@@ -91,3 +91,7 @@ C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\Temp\bin\Debug\UnityEngine
 C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\obj\Debug\Assembly-CSharp.csprojResolveAssemblyReference.cache
 C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\obj\Debug\Assembly-CSharp.dll
 C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\obj\Debug\Assembly-CSharp.pdb
+C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\Temp\bin\Debug\UnityEngine.Advertisements.dll
+C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\Temp\bin\Debug\UnityEngine.Purchasing.dll
+C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\Temp\bin\Debug\UnityEngine.Advertisements.xml
+C:\Users\Sarita\Desktop\games\when_will_the_bass_drop\Temp\bin\Debug\UnityEngine.Purchasing.xml

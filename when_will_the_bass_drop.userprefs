@@ -2,9 +2,9 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\highScoreManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\highscorescript.cs" Line="5" Column="44" />
-      <File FileName="Assets\Scripts\highscores.cs" Line="23" Column="12" />
-      <File FileName="Assets\Scripts\highScoreManager.cs" Line="24" Column="16" />
+      <File FileName="Assets\Scripts\highscorescript.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\highscores.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\highScoreManager.cs" Line="157" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
