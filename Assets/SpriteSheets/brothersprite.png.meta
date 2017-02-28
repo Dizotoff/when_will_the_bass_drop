@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 99d3b2c8e51c42049b782d236545014a
-timeCreated: 1488034911
+timeCreated: 1488276863
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -50,6 +50,7 @@ TextureImporter:
     21300086: brothersprite_40
     21300088: brothersprite_41
     21300090: brothersprite_42
+    21300092: bullet
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -708,6 +709,19 @@ TextureImporter:
         y: 177
         width: 26
         height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: bullet
+      rect:
+        serializedVersion: 2
+        x: 656
+        y: 324
+        width: 14
+        height: 3
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
