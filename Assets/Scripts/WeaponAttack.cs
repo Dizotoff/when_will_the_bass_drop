@@ -115,9 +115,23 @@ public class WeaponAttack : MonoBehaviour {
 	public void dropWeapon()
 	{
 
-		curWeapon.transform.position = this.transform.position;
-		curWeapon.SetActive (true);
-		setWeapon (null, "", 0.5f, false, false);
+		if (curWeapon == null) {
+
+		} else {
+			Vector3 mousePos = Camera.main.ScreenToWorldPoint (new Vector3 (Input.mousePosition.x, Input.mousePosition.y, 0)); //get the pos of the mouse and move the weapon in that way
+			curWeapon.AddComponent<ThrowWeapon> ();
+			Vector3 dir;
+			dir.x = mousePos.x - this.transform.position.x;
+			dir.y = mousePos.y - this.transform.position.y;
+			dir.z = 0;
+			curWeapon.GetComponent<Rigidbody2D> ().isKinematic = false; //can be affected by physics
+			curWeapon.GetComponent<ThrowWeapon> ().setDirection (dir);
+			curWeapon.transform.position = oneHandSpawn.transform.position;
+			curWeapon.transform.eulerAngles = this.transform.eulerAngles;
+			curWeapon.SetActive (true);
+			setWeapon (null, "", 0.5f, false,false);
+			pa.resetSprites ();
+		}
 
 	}
 
