@@ -34,13 +34,13 @@ public class SpriteContainer : MonoBehaviour {
 		switch (weapon) {
 		case "Mac10":
 			return pMac10Attack;
-			break;
+			//break;
 		case "Bowie":
 			return pBowieAttack;
-			break;
+			//break;
 		default:
 			return getPlayerPunch ();
-			break;
+			//break;
 		}
 	}
 
@@ -49,13 +49,13 @@ public class SpriteContainer : MonoBehaviour {
 		switch (weapon) {
 		case "Mac10":
 			return pMac10Walk;
-			break;
+			//break;
 		case "Bowie":
 			return pBowieWalk;
-			break;
+			//break;
 		default:
 			return getPlayerUnarmedWalk ();
-			break;
+			//break;
 		}
 	}
 
