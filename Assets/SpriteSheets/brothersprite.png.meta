@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 99d3b2c8e51c42049b782d236545014a
-timeCreated: 1488276863
+timeCreated: 1488283201
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -51,6 +51,8 @@ TextureImporter:
     21300088: brothersprite_41
     21300090: brothersprite_42
     21300092: bullet
+    21300094: BloodPool
+    21300096: Squirt
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -722,6 +724,32 @@ TextureImporter:
         y: 324
         width: 14
         height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BloodPool
+      rect:
+        serializedVersion: 2
+        x: 367
+        y: 167
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Squirt
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 83
+        width: 7
+        height: 6
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
