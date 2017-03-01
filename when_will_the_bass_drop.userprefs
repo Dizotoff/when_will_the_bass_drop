@@ -1,15 +1,16 @@
 ﻿<Properties StartupItem="Assembly-CSharp.csproj">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\WeaponAttack.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemyAI.cs">
     <Files>
       <File FileName="Assets\Scripts\PlayerAnimate.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\SpriteContainer.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\WeaponPickup.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\WeaponAttack.cs" Line="135" Column="3" />
+      <File FileName="Assets\Scripts\WeaponAttack.cs" Line="97" Column="171" />
       <File FileName="Assets\Scripts\GenericAnimate.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\Bullet.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ThrowWeapon.cs" Line="54" Column="1" />
-      <File FileName="Assets\Scripts\EnemyAttacked.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ThrowWeapon.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\EnemyAttacked.cs" Line="39" Column="48" />
+      <File FileName="Assets\Scripts\EnemyAI.cs" Line="92" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

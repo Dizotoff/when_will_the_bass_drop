@@ -1,7 +1,7 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "when_will_the_bass_drop", "Assembly-CSharp.csproj", "{BD182247-9C28-415C-1A58-03DC265710AC}"
+# Visual Studio 2008
+
+Project("{C242FC02-2097-4473-A24C-FB6751CA8251}") = "when_will_the_bass_drop", "Assembly-CSharp.csproj", "{BD182247-9C28-415C-1A58-03DC265710AC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

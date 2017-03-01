@@ -91,8 +91,10 @@ public class WeaponAttack : MonoBehaviour {
 			timer = timerReset;
 		} else {
 			//melee attack
+			int layerMask = 1<<9;
+			layerMask = ~layerMask;
 			pa.attack ();
-			RaycastHit2D ray = Physics2D.Raycast (new Vector2(this.transform.position.x,this.transform.position.y),new Vector2(transform.right.x,transform.right.y)); //create a line from the player wich can hit an enemy 
+			RaycastHit2D ray = Physics2D.Raycast (new Vector2(this.transform.position.x,this.transform.position.y),new Vector2(transform.right.x,transform.right.y),1.5f, layerMask); //create a line from the player wich can hit an enemy 
 			Debug.DrawRay (new Vector2(this.transform.position.x,this.transform.position.y),new Vector2(transform.right.x,transform.right.y),Color.green);
 			if (curWeapon == null && ray.collider.gameObject.tag == "Enemy") {
 				EnemyAttacked ea = ray.collider.gameObject.GetComponent<EnemyAttacked> ();
