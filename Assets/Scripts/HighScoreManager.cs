@@ -20,7 +20,7 @@ public class highScoreManager : MonoBehaviour {
 	void Start () {
 		connectionString = "URI= file:" + Application.dataPath + "/highscore.sqlite";
 		CreateTable ();
-		DeleteExtraScores ();
+		///DeleteExtraScores ();
 		ShowScore ();
 
 	}
@@ -73,7 +73,7 @@ public class highScoreManager : MonoBehaviour {
 
 			using (IDbCommand dbCmd = dbconnection.CreateCommand ())
 			{
-				string sqlQuery = "SELECT * FROM highscore ";
+				string sqlQuery = "SELECT * FROM highscore \nORDER BY Score\n LIMIT  1 ; ";
 
 				dbCmd.CommandText = sqlQuery;
 
@@ -129,7 +129,7 @@ public class highScoreManager : MonoBehaviour {
 		}
 
 	}
-	public void DeleteExtraScores()
+/*	public void DeleteExtraScores()
 	{
 		GetScore ();
 		if (SaveScores <= highscore.Count) 
@@ -152,5 +152,6 @@ public class highScoreManager : MonoBehaviour {
 				}
 			}
 		}
-	} 
+	}
+	*/
 }
