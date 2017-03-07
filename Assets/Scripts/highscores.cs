@@ -11,16 +11,16 @@ class highscores:IComparable<highscores>
 		this.Name = name;
 		this.ID = id;
 	}
-	public int CompareTo(highscores other)
+	public int CompareTo(highscores other) // We arre going to compare the highscores are order them accordingly.
 	{
 		if (other.Score < this.Score) {
 			return -1;
-		} 
-		else if (other.Score > this.Score) 
-		{
+		} else if (other.Score > this.Score) {
 			return 1;
+		} 
+		else {
+			return 0;
 		}
-		return 0;
 	}
 }
 
