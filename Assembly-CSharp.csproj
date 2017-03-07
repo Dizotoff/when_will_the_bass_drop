@@ -52,7 +52,9 @@
      <Compile Include="Assets\Scripts\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\EnemyAttacked.cs" />
      <Compile Include="Assets\Scripts\GenericAnimate.cs" />
+     <Compile Include="Assets\Scripts\ObjectManager.cs" />
      <Compile Include="Assets\Scripts\PlayerAnimate.cs" />
+     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\RotateToCursor.cs" />
      <Compile Include="Assets\Scripts\ScoreController.cs" />

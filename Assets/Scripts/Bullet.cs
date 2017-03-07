@@ -42,7 +42,13 @@ public class Bullet : MonoBehaviour {
 			Destroy (this.gameObject);
 
 
-		} else {
+		} else if (col.gameObject.tag == "Player") {
+			Instantiate (bloodImpact, this.transform.position, this.transform.rotation);
+			PlayerHealth.dead = true;//new for 10
+			Destroy (this.gameObject);
+		}
+
+		else {
 			Instantiate (wallImpact, this.transform.position, this.transform.rotation); //if it hit not the enemy  it will just create wall impact 
 			Destroy (this.gameObject);
 		}
