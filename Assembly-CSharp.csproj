@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\PlayerAnimate.cs" />
      <Compile Include="Assets\Scripts\PlayerMovement.cs" />
      <Compile Include="Assets\Scripts\RotateToCursor.cs" />
+     <Compile Include="Assets\Scripts\ScoreController.cs" />
      <Compile Include="Assets\Scripts\SpriteContainer.cs" />
      <Compile Include="Assets\Scripts\ThrowWeapon.cs" />
      <Compile Include="Assets\Scripts\WeaponAttack.cs" />

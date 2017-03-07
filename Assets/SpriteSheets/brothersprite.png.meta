@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 99d3b2c8e51c42049b782d236545014a
-timeCreated: 1488288886
+timeCreated: 1488910036
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -54,6 +54,8 @@ TextureImporter:
     21300094: BloodPool
     21300096: Squirt
     21300098: wall
+    21300100: blackdot
+    21300102: BLANK
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -764,6 +766,32 @@ TextureImporter:
         y: 29
         width: 13
         height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: blackdot
+      rect:
+        serializedVersion: 2
+        x: 669
+        y: 220
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: BLANK
+      rect:
+        serializedVersion: 2
+        x: 627
+        y: 523
+        width: 29
+        height: 10
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
