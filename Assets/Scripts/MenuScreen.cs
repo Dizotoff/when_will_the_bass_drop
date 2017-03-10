@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 public class MenuScreen : MonoBehaviour {
 
-	static public MenuScreen mu;//new menu 2
+	static public MenuScreen mu; 
 
 
 	float originalWidth = 1920.0f; 
@@ -20,7 +20,7 @@ public class MenuScreen : MonoBehaviour {
 
 
 
-	static public string curLevel; //new for menu 2
+	static public string curLevel;
 	// Use this for initialization
 
 	void awake()
@@ -64,7 +64,7 @@ public class MenuScreen : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (display == true) {//all display stuff new for menu part 2
+		if (display == true) {
 			inputController ();
 		}
 
