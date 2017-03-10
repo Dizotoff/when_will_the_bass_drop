@@ -49,9 +49,12 @@
      <Compile Include="Assets\Scripts\Bullet.cs" />
      <Compile Include="Assets\Scripts\CameraFollowPlayer.cs" />
      <Compile Include="Assets\Scripts\CameraRotateEffect.cs" />
+     <Compile Include="Assets\Scripts\Elevator.cs" />
      <Compile Include="Assets\Scripts\EnemyAI.cs" />
      <Compile Include="Assets\Scripts\EnemyAttacked.cs" />
      <Compile Include="Assets\Scripts\GenericAnimate.cs" />
+     <Compile Include="Assets\Scripts\LevelStore.cs" />
+     <Compile Include="Assets\Scripts\MenuScreen.cs" />
      <Compile Include="Assets\Scripts\ObjectManager.cs" />
      <Compile Include="Assets\Scripts\PlayerAnimate.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
@@ -63,6 +66,10 @@
      <Compile Include="Assets\Scripts\WeaponAttack.cs" />
      <Compile Include="Assets\Scripts\WeaponPickup.cs" />
      <Compile Include="Assets\Scripts\legDir.cs" />
+     <None Include="Assets\Resources\Editor\CM Tools\TileMasterReadme.txt" />
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
@@ -77,6 +84,9 @@
  </Reference>
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityPurchasing/UnityEngine.Purchasing.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.VR">
  <HintPath>D:/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
