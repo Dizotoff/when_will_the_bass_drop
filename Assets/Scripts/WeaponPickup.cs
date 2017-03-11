@@ -27,6 +27,7 @@ public class WeaponPickup : MonoBehaviour {
 			Debug.Log ("Player picked up:" + name2); //if player already has a weapon it will drop the current weapon
 			if (wa.getCur () != null) {
 				wa.dropWeapon ();
+
 			}
 			wa.setWeapon (this.gameObject, name2, fireRate, gun, oneHanded); //passing the name of sprite, firerate, attacking script (gun,meelee, shotgun)
 			// DESTROY THIS GAMEOBJECT

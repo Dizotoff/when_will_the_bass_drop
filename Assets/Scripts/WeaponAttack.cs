@@ -59,7 +59,7 @@ public class WeaponAttack : MonoBehaviour {
 
 	public void setWeapon(GameObject cur, string name, float fireRate,bool gun, bool oneHanded)
 	{
-
+		this.GetComponent<AudioController> ().pickupWeapon();
 		changingWeapon = true;
 		curWeapon = cur;
 		pa.setNewTorso (sc.getWeaponWalk(name),sc.getWeapon(name));
@@ -87,6 +87,7 @@ public class WeaponAttack : MonoBehaviour {
 			} else {
 				Instantiate (bl, twoHandSpawn.transform.position, this.transform.rotation);
 			}
+			this.GetComponent<AudioController> ().fireSmg ();
 
 			timer = timerReset;
 		} else {
@@ -99,10 +100,12 @@ public class WeaponAttack : MonoBehaviour {
 			if (curWeapon == null && ray.collider.gameObject.tag == "Enemy") {
 				EnemyAttacked ea = ray.collider.gameObject.GetComponent<EnemyAttacked> ();
 				ea.knockDownEnemy ();
+				this.GetComponent<AudioController> ().meleeAttack();
 			} else if (ray.collider != null) {
 				if (ray.collider.gameObject.tag == "Enemy") { //if player have meelee weapon -> instant kill 
 					EnemyAttacked ea = ray.collider.gameObject.GetComponent<EnemyAttacked> ();
 					ea.killMelee ();
+					this.GetComponent<AudioController> ().meleeAttack();
 				}
 			}
 		}
@@ -136,5 +139,10 @@ public class WeaponAttack : MonoBehaviour {
 		}
 
 	}
+
+
+
+
+
 
 }
