@@ -29,11 +29,11 @@ public class ScoreController : MonoBehaviour {
 		Vector3 spawnPos = position;
 		spawnPos.y += 2;
 
-		if (val == 500) {
-			Instantiate (fiveHun, spawnPos, fiveHun.transform.rotation);
-		} else if (val == 1000) {
-			Instantiate (thou, spawnPos, fiveHun.transform.rotation);
-		}
+		//if (val == 500) {
+		//	Instantiate (fiveHun, spawnPos, fiveHun.transform.rotation);
+		//} else if (val == 1000) {
+		//	Instantiate (thou, spawnPos, fiveHun.transform.rotation);
+		//}
 	}
 
 	public void increaseMultiplier()
@@ -82,7 +82,7 @@ public class ScoreController : MonoBehaviour {
 			GUI.DrawTexture (bgPos, bg);
 			//changed for ep on cutscenes
 				GUI.Box (scorePos, "Score: " + score, text);
-				GUI.Box (multiPos, "Combo: " + currentMultiplier + " * " + tempScoreHold + " - " + (int)comboTimer, text);
+				//GUI.Box (multiPos, "Combo: " + currentMultiplier + " * " + tempScoreHold + " - " + (int)comboTimer, text);
 			
 				
 			

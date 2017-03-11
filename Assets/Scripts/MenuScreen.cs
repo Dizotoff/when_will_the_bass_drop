@@ -47,6 +47,8 @@ public class MenuScreen : MonoBehaviour {
 	public void saveHighScore()//new for menu 2
 	{
 
+
+
 		LevelStore ls = new LevelStore ();
 		for (int x = 0; x < levels.Length; x++) {
 			if (levels [x].levelName==curLevel) {
@@ -55,9 +57,10 @@ public class MenuScreen : MonoBehaviour {
 
 			}
 		}
-
+			//sending highscore to the database here 
 		ScoreController sc = GameObject.FindGameObjectWithTag ("GameController").GetComponent<ScoreController> ();
 		Debug.Log ("Saving high score " + sc.getScore () + " For level " + curLevel);
+
 		ls.save (sc.getScore ());
 		checkForLevelUnlocked ();
 	}
@@ -74,7 +77,10 @@ public class MenuScreen : MonoBehaviour {
 	}
 
 	void checkForLevelUnlocked()
+
+
 	{
+				//reading info from database
 		for (int x = 1; x <= levels.Length; x++) {
 			if (levels [x - 1].highScore > 0) {
 				levels [x].unlocked = true;
