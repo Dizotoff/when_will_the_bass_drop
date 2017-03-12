@@ -26,6 +26,8 @@ public class LevelStore : MonoBehaviour {
 
 	public void save(int newHighScore)
 	{
+
+		//sending info to the database HERE
 		highScore = newHighScore;
 		path = Application.persistentDataPath+"/"+levelName + "scoreData.dat";
 
@@ -43,6 +45,8 @@ public class LevelStore : MonoBehaviour {
 
 	public void load()
 	{
+
+		//loading info from the database HERE
 		path = Application.persistentDataPath+"/"+levelName + "scoreData.dat";
 
 		if (File.Exists (path)) {

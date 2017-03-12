@@ -3,7 +3,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 public class MenuScreen : MonoBehaviour {
 
-	static public MenuScreen mu;//new menu 2
+	static public MenuScreen mu; 
 
 
 	float originalWidth = 1920.0f; 
@@ -20,7 +20,7 @@ public class MenuScreen : MonoBehaviour {
 
 
 
-	static public string curLevel; //new for menu 2
+	static public string curLevel;
 	// Use this for initialization
 
 	void awake()
@@ -47,6 +47,8 @@ public class MenuScreen : MonoBehaviour {
 	public void saveHighScore()//new for menu 2
 	{
 
+
+
 		LevelStore ls = new LevelStore ();
 		for (int x = 0; x < levels.Length; x++) {
 			if (levels [x].levelName==curLevel) {
@@ -55,16 +57,17 @@ public class MenuScreen : MonoBehaviour {
 
 			}
 		}
-
+			//sending highscore to the database here 
 		ScoreController sc = GameObject.FindGameObjectWithTag ("GameController").GetComponent<ScoreController> ();
 		Debug.Log ("Saving high score " + sc.getScore () + " For level " + curLevel);
+
 		ls.save (sc.getScore ());
 		checkForLevelUnlocked ();
 	}
 
 	// Update is called once per frame
 	void Update () {
-		if (display == true) {//all display stuff new for menu part 2
+		if (display == true) {
 			inputController ();
 		}
 
@@ -74,7 +77,10 @@ public class MenuScreen : MonoBehaviour {
 	}
 
 	void checkForLevelUnlocked()
+
+
 	{
+				//reading info from database
 		for (int x = 1; x <= levels.Length; x++) {
 			if (levels [x - 1].highScore > 0) {
 				levels [x].unlocked = true;
@@ -104,7 +110,7 @@ public class MenuScreen : MonoBehaviour {
 
 		} else if (play == true) {
 			curLevel = levels [levelSelectCount].levelName;
-			if (Input.GetKeyDown (KeyCode.Backspace)) {
+			if (Input.GetKeyDown (KeyCode.Escape)) {
 				play = false;
 				menu = true;
 			}
@@ -152,7 +158,7 @@ public class MenuScreen : MonoBehaviour {
 				titlePos = new Rect (originalWidth / 2 - 405, originalHeight - originalHeight - 5, 800, 300);
 				GUI.Box (titlePos, "When will the bass drop?", titleText);
 
-				Rect menuPos = new Rect (originalWidth / 2 - 400, originalHeight - originalHeight + 400, 800, 200);
+				Rect menuPos = new Rect (originalWidth / 2 - 410, originalHeight - originalHeight + 400, 800, 200);
 				if (playSelect == true) {
 					GUI.DrawTexture (menuPos, bg);
 					GUI.Box (menuPos, "Play", text);
@@ -170,9 +176,7 @@ public class MenuScreen : MonoBehaviour {
 				}
 
 			} else if (play == true) {
-				Rect backToRet = new Rect (originalWidth - originalWidth + 200, originalHeight - 200, 800, 200);
-				GUI.DrawTexture (backToRet, bg);
-				GUI.Box (backToRet, "Press backspace to return to menu", text);
+				
 				titlePos = new Rect (originalWidth / 2 - 400, originalHeight - originalHeight, 800, 300);
 				GUI.Box (titlePos, "When will the bass drop?", titleShadow);
 
@@ -187,7 +191,7 @@ public class MenuScreen : MonoBehaviour {
 					levelTitlePos = new Rect (originalWidth / 2 - 400, originalHeight - originalHeight + 300, 800, 200);
 					GUI.Box (levelTitlePos, "High Score : " + levels [levelSelectCount].highScore, text);
 
-					levelTitlePos = new Rect (originalWidth / 2 - 245, originalHeight - originalHeight + 550, 543, 105);
+					levelTitlePos = new Rect (originalWidth / 2 - 400, originalHeight - originalHeight + 550, 850, 150);
 					GUI.DrawTexture (levelTitlePos, levels [levelSelectCount].levelIcon);
 				} else {
 					Rect levelTitlePos = new Rect (originalWidth / 2 - 400, originalHeight - originalHeight + 200, 800, 200);
