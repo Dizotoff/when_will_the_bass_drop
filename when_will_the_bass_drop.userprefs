@@ -2,20 +2,12 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CutsceneDisplay.cs">
     <Files>
-      <File FileName="Assets\Scripts\LevelEscapeController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MenuScreen.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ScoreController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\LevelStore.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\ThrowWeapon.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\MusicController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\AudioController.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\WeaponAttack.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\WeaponPickup.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerHealth.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayVideo.cs" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\CutsceneDisplay.cs" Line="80" Column="106" />
+      <File FileName="Assets\Scripts\CameraRotateEffect.cs" Line="17" Column="3" />
+      <File FileName="Assets\Scripts\MenuScreen.cs" Line="161" Column="53" />
+      <File FileName="Assets\Scripts\CutsceneDisplay.cs" Line="46" Column="39" />
       <File FileName="Assets\Scripts\CutsceneContainer.cs" Line="17" Column="1" />
-      <File FileName="Assets\Resources\Editor\CM Tools\TileMaster\TileMaster.cs" Line="112" Column="4" />
+      <File FileName="Assets\Scripts\WeaponAttack.cs" Line="146" Column="1" />
+      <File FileName="Assets\Scripts\WeaponPickup.cs" Line="24" Column="70" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

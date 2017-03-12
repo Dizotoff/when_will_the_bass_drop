@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: ee55704fb8801e64783d61e07ce9ad3f
-timeCreated: 1489320724
+timeCreated: 1489334144
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -17,6 +17,11 @@ TextureImporter:
     21300020: garbage dots
     21300022: Xg2lvjM_2
     21300024: Xg2lvjM_3
+    21300026: table
+    21300028: garbage1
+    21300030: dirt
+    21300032: garbage2
+    21300034: garbage3
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -246,6 +251,71 @@ TextureImporter:
         y: 635
         width: 7
         height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: table
+      rect:
+        serializedVersion: 2
+        x: 526
+        y: 442
+        width: 86
+        height: 74
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: garbage1
+      rect:
+        serializedVersion: 2
+        x: 697
+        y: 405
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: dirt
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 469
+        width: 49
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: garbage2
+      rect:
+        serializedVersion: 2
+        x: 748
+        y: 405
+        width: 30
+        height: 22
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: garbage3
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 405
+        width: 30
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
