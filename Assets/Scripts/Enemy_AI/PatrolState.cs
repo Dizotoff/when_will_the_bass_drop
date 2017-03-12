@@ -1,8 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
-public class PatrolState {
+public class PatrolState : IEnemyState {
 	private readonly EnemyState enemy;
 
 	public PatrolState(EnemyState enemyState) {
@@ -10,19 +11,19 @@ public class PatrolState {
 	}
 
 	public void UpdateState (){
-		PatrolState ();
+		Patrol();
 	}
 
 	void Patrol () {
-		this.transform.Translate(Vector3.right * speed * Time.deltaTime);
+		enemy.transform.Translate(Vector3.right * enemy.speed * Time.deltaTime);
 		Debug.Log ("PATROLLING");
 
 		if (EnemySightLine().collider && EnemySightLine().collider.CompareTag("Wall")){
 			Debug.Log ("FACING A WALL");
-			if (clockwise == false){
-				transform.Rotate(0, 0, 90);
+			if (enemy.Clockwise == false){
+				enemy.transform.Rotate(0, 0, 90);
 			} else {
-				transform.Rotate(0, 0, -90);
+				enemy.transform.Rotate(0, 0, -90);
 			}
 		}
 			
@@ -35,12 +36,19 @@ public class PatrolState {
 
 
 	RaycastHit2D PlayerDetectionRay (){
-		float dist = Vector3.Distance (player.transform.position, this.transform.position); // distance between player and enemy
-		Vector3 dir = player.transform.position - transform.position; // direction towards player
-		hit = Physics2D.Raycast (new Vector2 (this.transform.position.x, this.transform.position.y),
-			new Vector2 (dir.x, dir.y), dist, layerMask); // created a raycast from enemy to player
-		Debug.DrawRay(this.transform.position, dir, Color.red); // you'll see the ray in the scene view when running the game
-		return hit;
+		float dist = Vector3.Distance (enemy.Target.transform.position, enemy.transform.position); // distance between player and enemy
+		Vector3 dir = enemy.Target.transform.position - enemy.transform.position; // direction towards player
+		enemy.hit = Physics2D.Raycast (new Vector2 (enemy.transform.position.x, enemy.transform.position.y),
+			new Vector2 (dir.x, dir.y), dist, enemy.layerMask); // created a raycast from enemy to player
+		Debug.DrawRay(enemy.transform.position, dir, Color.red); // you'll see the ray in the scene view when running the game
+		return enemy.hit;
+	}
+
+	RaycastHit2D EnemySightLine() {
+		Vector3 sightDir = enemy.transform.TransformDirection(Vector3.right); // direction where the enemy is looking (forward)
+		RaycastHit2D hit2 = Physics2D.Raycast(new Vector2(enemy.transform.position.x, enemy.transform.position.y), new Vector2(sightDir.x, sightDir.y), 1.0f, enemy.layerMask);
+		Debug.DrawRay (new Vector2(enemy.transform.position.x, enemy.transform.position.y), new Vector2(sightDir.x, sightDir.y), Color.cyan);
+		return hit2;
 	}
 
 	public void OnTriggerEnter(Collider other){
@@ -50,7 +58,7 @@ public class PatrolState {
 	}
 
 
-	public void ToAlertSate(){
+	public void ToAlertState(){
 		enemy.currentState = enemy.alertState;
 	}
 

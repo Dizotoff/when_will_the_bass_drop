@@ -16,14 +16,22 @@ public class EnemyState : MonoBehaviour {
 	[HideInInspector]
 	public ChaseState chaseState;
 
+	public float speed = 1.5f;
+	public GameObject EnemyObject;
+	public GameObject Target;
+	public bool Clockwise;
+	public RaycastHit2D hit;
+	public int layerMask = 1 << 7;
+
 	void Awake (){
 		patrolState = new PatrolState(this);
 		alertState = new AlertState(this);
 		chaseState = new ChaseState(this);
+
 	}
 
 
-	void Start() {
+	void Start(){
 		currentState = patrolState;
 	}
 
@@ -32,7 +40,7 @@ public class EnemyState : MonoBehaviour {
 	}
 
 	private void onTriggerEnter(Collider other){
-		currentState.OnTriggerEnter ();
+		currentState.OnTriggerEnter (other);
 	}
 
 }
