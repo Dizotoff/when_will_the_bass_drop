@@ -46,8 +46,8 @@ public class Search {
 
 		iterations++;
 
-		var node = ChoseNode ();
-		if (node == goalNode) { // does the node actually equal the goal node?
+		var node = ChoseNode (); // returns a random node from the reachable nodes
+		if (node == goalNode) { // checks if the node is actually equal the goal node
 			while(node != null){ // fills the path to how we got here. 
 				path.Insert (0, node);
 				node = node.previous;
