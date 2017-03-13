@@ -97,7 +97,7 @@ public class WeaponAttack : MonoBehaviour {
 			pa.attack ();
 			RaycastHit2D ray = Physics2D.Raycast (new Vector2(this.transform.position.x,this.transform.position.y),new Vector2(transform.right.x,transform.right.y),1.5f, layerMask); //create a line from the player wich can hit an enemy 
 			Debug.DrawRay (new Vector2(this.transform.position.x,this.transform.position.y),new Vector2(transform.right.x,transform.right.y),Color.green);
-			if (curWeapon == null && ray.collider.gameObject.tag == "Enemy") {
+			if (curWeapon == null && ray.collider.gameObject.tag == "Enemy") { // if player doesn't hold any weapon and the player sight line (ray) hits enemy, 
 				EnemyAttacked ea = ray.collider.gameObject.GetComponent<EnemyAttacked> ();
 				ea.knockDownEnemy ();
 				this.GetComponent<AudioController> ().meleeAttack();
