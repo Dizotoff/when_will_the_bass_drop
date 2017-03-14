@@ -21,13 +21,15 @@ public class EnemyState : MonoBehaviour {
 	// That's why I have put these values ere, and they are called in other classes through enemy (Type EnemyState).
 	// This way you don't have to open the scripts if you want to change or try different values.
 
-	public float Speed = 1.5f; // this is different in ChaseState, however.... chase speed needs to be changed inside the script. Ha.
+	public float Speed = 1.5f;
+	public float ChaseSpeed = 4.5f;
 	public GameObject Target;
 	public bool Clockwise;
 	public RaycastHit2D Hit;
 	public int LayerMask = 1 << 7;
 	public bool Stationary;
-	public float SearchDuration; 
+	public float SearchDuration;
+	public float RotationSpeed;
 
 	void Awake (){
 		patrolState = new PatrolState(this);

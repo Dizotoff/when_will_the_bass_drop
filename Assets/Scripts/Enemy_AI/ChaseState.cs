@@ -12,15 +12,14 @@ public class ChaseState : IEnemyState {
 
 	private void Chase() {
 		Debug.Log ("CHASE");
-		enemy.Speed = 5.5f;
+		Vector3 dir = enemy.Target.transform.position - enemy.transform.position;
+		enemy.transform.Translate (dir * enemy.ChaseSpeed * Time.deltaTime);
 
-		// Add rotation later, for now just focus on pursuing the player!!
+		// enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, enemy.Target.transform.position, enemy.ChaseSpeed * Time.deltaTime);
 
-		enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, enemy.Target.transform.position, enemy.Speed * Time.deltaTime);
-
-		if (PlayerDetectionRay ().collider.gameObject.CompareTag("Player")) { // if the guard doesn't see the player anymore, it  goes back to patrolling
+		 if (!PlayerDetectionRay ().collider.gameObject.CompareTag("Player")) { // if the guard doesn't see the player anymore, it  goes back to patrolling
 			ToPatrolState ();
-		}
+		 }
 
 	}
 

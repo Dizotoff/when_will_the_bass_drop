@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerAnimate : MonoBehaviour {
 	public Sprite[] walking, attacking, legsSpr;
-	int counter = 0, legCount =0;
+	int counter = 0, legCount = 0;
 	PlayerMovement pm;
 	float timer = 0.05f, legTimer = 0.05f;
 	public SpriteRenderer torso, legs;
