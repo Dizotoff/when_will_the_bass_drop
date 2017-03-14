@@ -9,12 +9,16 @@ public class Timer : MonoBehaviour {
 	bool check=true;
 	public GameObject player;
 	Rigidbody2D RB;
-
+	private GameObject DeskWall;
+	ScoreController sc;
 	// Use this for initialization
 	void Start () {
 		CutScene3 = GameObject.Find ("LevelBlock");
 		player = GameObject.FindGameObjectWithTag ("DjDesk");
 		RB = player.GetComponent<Rigidbody2D>();
+		DeskWall = GameObject.Find ("DeskWall");
+		DeskWall.SetActive (false);
+		sc = GameObject.FindGameObjectWithTag ("GameController").GetComponent<ScoreController> ();
 
 	}
 	
@@ -42,7 +46,8 @@ public class Timer : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Player") {
 			this.GetComponent<AudioController> ().DropBass();
-			other.enabled = false;
+			DeskWall.SetActive (true);
+			sc.AddScore (5000,this.transform.position);
 			count = true;
 		}
 	}
