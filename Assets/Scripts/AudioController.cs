@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AudioController : MonoBehaviour {
 	AudioSource aus;
-	public AudioClip pickup,smgShot,melee;
+	public AudioClip pickup,smgShot,melee, bass;
 	// Use this for initialization
 	void Start () {
 		aus = this.GetComponent<AudioSource> ();
@@ -12,6 +12,12 @@ public class AudioController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
+	}
+
+	public void DropBass()
+	{
+		aus.clip = bass;
+		aus.Play ();
 	}
 
 	public void fireSmg()

@@ -23,12 +23,12 @@ public class GenericAnimate : MonoBehaviour {
 		if (whileNear == true) {
 			animateWhileNear ();
 		} else if (needsActivating == true && activated == false) {
-			if (Input.GetKey (KeyCode.E) && Vector3.Distance (player.transform.position, this.transform.position) < 2.0f) {
+			if (Input.GetKey (KeyCode.Mouse0) && Vector3.Distance (player.transform.position, this.transform.position) < 2.0f) {
 				activated = true;
 			}
 		} else if (needsActivating == true && activated == true) {
 			normalAnimate ();
-			if (Input.GetKey (KeyCode.E) && Vector3.Distance (player.transform.position, this.transform.position) < 2.0f) {
+			if (Input.GetKey (KeyCode.Mouse0) && Vector3.Distance (player.transform.position, this.transform.position) < 2.0f) {
 				activated = false;
 			}
 		} else {
