@@ -10,9 +10,9 @@ public class PathFinding : MonoBehaviour {
 	public Sprite SpriteWall; // Dragged the wall sprite here in Unity
 	public Sprite SpriteFloor; 
 	public GameObject TileLayer;
-	int rows = 10;
-	int cols = 10;
-
+	static int rows = 10;
+	static int cols = 10;
+	int[,] map = new int [rows, cols];
 
 	void TileState (GameObject tile, int[,] array) {
 		int x = (int)tile.transform.position.x; // the position of the object gives us the indices of the corresponding node in the map array
@@ -28,8 +28,6 @@ public class PathFinding : MonoBehaviour {
 
 	void Start ()
 	{
-		int[,] map = new int [rows, cols];
-
 		foreach (Transform child in TileLayer.transform) { // iterates through every child inside our tile map layer ( a parent object, works as a container)
 			TileState (child.gameObject, map); // now creates the array of nodes
 		}
@@ -41,8 +39,10 @@ public class PathFinding : MonoBehaviour {
 
 		}*/
 
+	}
 
 
+	void Update() {
 		var graph = new Graph (map);
 		var search = new Search (graph);
 		int EX = (int)Enemy.transform.position.x; // Enemy's X-position, shows 1 unit less than the actual tile position but it has been taken into account in search.Start()
@@ -52,12 +52,18 @@ public class PathFinding : MonoBehaviour {
 
 		search.Start (graph.nodes [(EX - 1) * cols + EY], graph.nodes [(PX - 1) * cols + PY]);
 
+
 		while (!search.finished) {
 			search.Step ();
 		}
 
-		Debug.Log ("Search done. Path length " + search.path.Count + ", iterations " + search.iterations);
 
-	}
+		for (int i = 0; i < search.path.Count; i++) {
+			// Debug.Log ();
+		}
+		Debug.Log ("Search done. Path length " + search.path.Count + ", iterations " + search.iterations);	
+		
+		}
+
 }
 

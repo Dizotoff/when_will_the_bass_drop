@@ -56,7 +56,7 @@ public class LevelStore : MonoBehaviour {
 			levelHighScore data = (levelHighScore)bf.Deserialize(file);
 			highScore = data.highScore;
 			file.Close();
-			Debug.Log ("MANAGED TO LOAD FILE FROM " + path);
+			// Debug.Log ("MANAGED TO LOAD FILE FROM " + path);
 
 		} else {
 			save (highScore);
