@@ -20,6 +20,7 @@ public class PathFinding : MonoBehaviour {
 
 		if (tile.GetComponent<SpriteRenderer> ().sprite == SpriteWall) { // now asking if the sprite used in this object is 
 			array [y, x] = 1; // solid tile/node
+
 		} else {
 			array [y, x] = 0; // open tile/node
 		}
