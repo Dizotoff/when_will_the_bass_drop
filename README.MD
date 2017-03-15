@@ -9,7 +9,7 @@ WHEN_WILL_THE_BASS_DROP.exe<br>
 2. Choose the desired resolution and quality.<br>
 3. Enjoy!<br>
 <br>
-## Game controls:
+### Game controls: ###<br>
 <br>
 Main idea is to avoid getting caught by the guards while moving through a building.<br>
 <br>
@@ -25,10 +25,10 @@ Right mouse click - PICK UP WEAPON / DROP WEAPON<br>
 <br>
 P - EXIT CUT SCENE ( press only once )<br>
 <br>
-### Built with: ###
+### Built with: ###<br>
 Unity Free, version 5.5<br>
 <br>
-### Authors: ###
+### Authors: ###<br>
 Dmytro Izotov<br>
 Sarita Khanal<br>
 Emily Hernandez
