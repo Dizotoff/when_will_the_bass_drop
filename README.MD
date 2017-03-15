@@ -27,9 +27,7 @@ Unity Free, version 5.5<br>
 ### Authors: ###
 Dmytro Izotov<br>
 Sarita Khanal<br>
-Emily Hernandez<br>
-<br>
-NEWEST VERSION AVAILABLE AT: https://github.com/Dizotoff/when_will_the_bass_drop
+Emily Hernandez
 
 
 
