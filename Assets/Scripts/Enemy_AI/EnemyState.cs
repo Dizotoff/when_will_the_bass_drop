@@ -32,7 +32,9 @@ public class EnemyState : MonoBehaviour {
 
 	public bool Stationary;
 	public float SearchDuration;
-	public float RotationSpeed = 6.5f;
+	public float RotationSpeed = 5.5f;
+	public float MinDist;
+	public float SlowDownDist;
 
 	void Awake (){
 		patrolState = new PatrolState(this);

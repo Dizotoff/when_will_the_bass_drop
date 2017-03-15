@@ -18,8 +18,15 @@ public class ChaseState : IEnemyState {
 		Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
 		enemy.transform.rotation = Quaternion.Slerp(enemy.transform.rotation, q, Time.deltaTime * enemy.ChaseSpeed); // found this working solution from http://answers.unity3d.com/questions/650460/rotating-a-2d-sprite-to-face-a-target-on-a-single.html
 
-		// enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, enemy.Target.transform.position, enemy.ChaseSpeed * Time.deltaTime); // moving to the direction of the player
-		enemy.transform.Translate(dir * enemy.ChaseSpeed * Time.deltaTime);
+		if (Vector3.Distance (enemy.transform.position, enemy.Target.transform.position) >= enemy.SlowDownDist) {
+			enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, enemy.Target.transform.position, enemy.ChaseSpeed * Time.deltaTime); // moving to the direction of the player
+		} else if (Vector3.Distance (enemy.transform.position, enemy.Target.transform.position) < enemy.SlowDownDist && Vector3.Distance(enemy.transform.position, enemy.Target.transform.position) >= enemy.MinDist ){ // if distance between min distance and slow down distance
+			enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, enemy.Target.transform.position, enemy.Speed * Time.deltaTime); // moving to the direction of the player, but now slower
+		} else {
+			PlayerHealth.dead = true; // if enemy comes close enough, the player is considered to be caught/dead.
+		}
+
+
 
 
 		 if (!PlayerDetectionRay ().collider.gameObject.CompareTag("Player")) { // if the guard doesn't see the player anymore, it  goes back to patrolling
