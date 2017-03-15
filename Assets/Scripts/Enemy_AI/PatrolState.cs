@@ -18,10 +18,10 @@ public class PatrolState : IEnemyState {
 
 	void Patrol () {
 		enemy.transform.Translate(Vector3.right * enemy.Speed * Time.deltaTime);
-		Debug.Log ("PATROLLING"); // WORKS!
+		// Debug.Log ("PATROLLING"); // WORKS!
 
 		if (EnemySightLine().collider.gameObject.tag == "Wall"){
-			Debug.Log ("FACING A WALL, TURNING");
+			// Debug.Log ("FACING A WALL, TURNING");
 			if (enemy.Clockwise == false){
 				enemy.transform.Rotate(0, 0, 90);
 			} else {
@@ -32,7 +32,7 @@ public class PatrolState : IEnemyState {
 
 		if(PlayerDetectionRay().collider.gameObject.tag == "Player") {
 			ToChaseState();
-			Debug.Log("Found the player");
+			// Debug.Log("Found the player");
 		}
 			
 	}

@@ -22,14 +22,17 @@ public class EnemyState : MonoBehaviour {
 	// This way you don't have to open the scripts if you want to change or try different values.
 
 	public float Speed = 1.5f;
-	public float ChaseSpeed = 4.5f;
+	public float ChaseSpeed = 5.5f;
 	public GameObject Target;
 	public bool Clockwise;
 	public RaycastHit2D Hit;
+
+	[HideInInspector]
 	public int LayerMask = 1 << 7;
+
 	public bool Stationary;
 	public float SearchDuration;
-	public float RotationSpeed;
+	public float RotationSpeed = 6.5f;
 
 	void Awake (){
 		patrolState = new PatrolState(this);

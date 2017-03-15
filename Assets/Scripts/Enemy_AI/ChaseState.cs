@@ -12,10 +12,15 @@ public class ChaseState : IEnemyState {
 
 	private void Chase() {
 		Debug.Log ("CHASE");
-		Vector3 dir = enemy.Target.transform.position - enemy.transform.position;
-		enemy.transform.Translate (dir * enemy.ChaseSpeed * Time.deltaTime);
+		Vector3 dir = enemy.Target.transform.position - enemy.transform.position; // direction from enemy to player
+	
+		float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg; // this and the next line are for enemy rotation calculations
+		Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+		enemy.transform.rotation = Quaternion.Slerp(enemy.transform.rotation, q, Time.deltaTime * enemy.ChaseSpeed); // found this working solution from http://answers.unity3d.com/questions/650460/rotating-a-2d-sprite-to-face-a-target-on-a-single.html
 
-		// enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, enemy.Target.transform.position, enemy.ChaseSpeed * Time.deltaTime);
+		// enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, enemy.Target.transform.position, enemy.ChaseSpeed * Time.deltaTime); // moving to the direction of the player
+		enemy.transform.Translate(dir * enemy.ChaseSpeed * Time.deltaTime);
+
 
 		 if (!PlayerDetectionRay ().collider.gameObject.CompareTag("Player")) { // if the guard doesn't see the player anymore, it  goes back to patrolling
 			ToPatrolState ();
