@@ -10,6 +10,7 @@ WHEN_WILL_THE_BASS_DROP.exe<br>
 3. Enjoy!<br>
 <br>
 ### Game controls: ###
+<br>
 Main idea is to avoid getting caught by the guards while moving through a building.<br>
 <br>
 W - UP / Menu controls<br>
