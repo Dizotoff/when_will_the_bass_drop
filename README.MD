@@ -1,4 +1,4 @@
-## TXL16S1-B, GAMES: WHEN WILL THE BASS DROP? ##
+## TXL16S1-B GAMES: WHEN WILL THE BASS DROP? ##
 
 ### Files included with this project: ###
 WHEN_WILL_THE_BASS_DROP.Data<br>
