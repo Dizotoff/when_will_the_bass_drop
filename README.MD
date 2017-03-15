@@ -1,18 +1,16 @@
-###### TXL16S1-B  ######
+# TXL16S1-B  ######
 
-### Game project: ###
+## Game project: WHEN WILL THE BASS DROP? ##
 
-## WHEN WILL THE BASS DROP? ##
-
-# Files included with this project: #
+### Files included with this project: ###
 
 
 
-# Installing: #
+### Installing: ###
 
 
 
-# Game controls: #
+### Game controls: ###
 Main idea is to avoid getting caught by the guards while moving through a building.
 
 W - UP
@@ -25,10 +23,10 @@ Right mouse click - PICK UP WEAPON / DROP WEAPON
 
 P - EXIT CUT SCENE ( press only once )
 
-# Built with: #
+### Built with: ###
 Unity Free, version 5.5
 
-# Authors: #
+### Authors: ###
 Dmytro Izotov
 Sarita Khanal
 Emily Hernandez
