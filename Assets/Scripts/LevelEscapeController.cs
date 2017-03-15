@@ -17,10 +17,10 @@ public class LevelEscapeController : MonoBehaviour {
 	}
 
 	void Update () {
-		if (areAllEnemiesDead () == true && sr.sprite != doorsOpen) {
+		
 			openCar ();
 
-		}
+
 
 
 	}
@@ -28,11 +28,7 @@ public class LevelEscapeController : MonoBehaviour {
 
 	public bool areAllEnemiesDead()
 	{
-		for (int x = 0; x < enemies.Length; x++) {
-			if (enemies [x].tag != "Dead") {
-				return false;
-			}
-		}
+		
 		return true;
 	}
 
@@ -45,7 +41,7 @@ public class LevelEscapeController : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D other) {
 		if (other.gameObject.tag == "Player") {
 		 
-			Debug.Log ("COOOOOLLLLIIIDDEEEERRR!!!!");
+
 
 			MenuScreen menu = GameObject.FindGameObjectWithTag ("Menu").GetComponent<MenuScreen> ();
 
