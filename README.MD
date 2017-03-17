@@ -25,7 +25,7 @@ R - RESTART
 Left mouse click - PUNCH / STAB / SHOOT<br>
 Right mouse click - PICK UP WEAPON / DROP WEAPON<br>
 <br>
-P - EXIT CUT SCENE ( press only once )<br>
+P - EXIT CUT SCENE <br>
 <br>
 
 ### Built with: ###<br>
