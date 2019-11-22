@@ -1,15 +1,5 @@
 ## TXL16S1-B GAMES: WHEN WILL THE BASS DROP? ##
-
-### Files included with this project: ###
-WHEN_WILL_THE_BASS_DROP.Data<br>
-WHEN_WILL_THE_BASS_DROP.exe<br>
-<br>
-
-### Installing: ###
-1. Open the .exe file<br>
-2. Choose the desired resolution and quality.<br>
-3. Enjoy!<br>
-<br>
+Okay, so to play this you need to compile it by yourself using Unity Free 5.5 and then install. It has lit auditracks tho. 
 
 ### Game controls: ###<br>
 <br>
